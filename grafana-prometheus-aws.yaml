@@ -1,0 +1,11 @@
+apiVersion: 1
+
+datasources:
+  - name: AWS Prometheus
+    type: prometheus
+    access: proxy
+    url: https://aps-workspaces.<region>.amazonaws.com/workspaces/<workspace-id>
+    jsonData:
+      sigV4Auth: true
+      sigV4Region: <region>
+    isDefault: false
